@@ -1,6 +1,6 @@
 # learn es6 note
 
-## let和const命令
+## let和const
 
 ### let
 
