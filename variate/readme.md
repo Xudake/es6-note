@@ -28,3 +28,33 @@
 let { foo: baz } = { foo: 'aaa', bar: 'bbb' };
 baz // "aaa"
 ```
++ 与数组一样，解构也可以用于嵌套解构的对象
+```
+let obj = {
+    p: [
+        'hello',
+        {y: 'world'}
+    ]
+};
+
+let {p: [x,{y}]} = obj;
+x;//hello
+y;//world
+```
++ 支持默认值，严格等于undefined默认值才生效
++ 不可将大括号写在首行，避免被解释成代码块
+```
+// 错误的写法
+let x;
+{x} = {x: 1};
+// SyntaxError: syntax error
+
+// 正确的写法
+let x;
+({x} = {x: 1});
+```
++ 可以很方便的把现有对象的一些方法，赋值给某个变量
+```
+let { log, sin, cos } = Math;
+```
++ 可以对数组进行对象的解构赋值
