@@ -58,3 +58,133 @@ let x;
 let { log, sin, cos } = Math;
 ```
 + 可以对数组进行对象的解构赋值
+
+
+## 字符串的解构赋值
+```
+const [a,b,c,d,e] = 'hello';
+console.log(a,b,c,d,e); //h e l l o
+
+let {length: l} = 'hello';
+console.log(l);//5
+```
+
+## 数值和布尔型的解构赋值
+> 只要等号右边不是对象或数组 都要先转为对象 由于undefined和null无法转为对象
+```
+let {toString: s} = 123;
+let {toString: bs} = true;
+console.log(s===Number.prototype.toString)//true
+console.log(bs===Boolean.prototype.toString)//true
+```
+
+## 函数参数的解构赋值
+```
+function move({x=0,y=0}={}){
+    return [x,y];
+}
+
+console.log(move({x:3,y:8}))
+console.log(move({x:3}))
+console.log(move({}))
+console.log(move())
+// [3, 8]
+// [3, 0]
+// [0, 0]
+// [0, 0]
+
+function move2({x,y}={x:0,y:0}){
+    return [x,y]
+}
+
+console.log(move2({x:3,y:8}))
+console.log(move2({x:3}))
+console.log(move2({}))
+console.log(move2())
+// [3, 8]
+// [3, undefined]
+// [undefined, undefined]
+// [0, 0]
+```
+
+## 解构赋值的作用
+
+### 交换变量的值
+```
+let x = 1;
+let y = 2;
+[x,y]=[y,x];
+console.log(x,y);
+```
+
+### 从函数返回多个值
+```
+function example(){
+    return [1,2,3];
+}
+
+let [a,b,c] = example();
+console.log(a,b,c);
+
+function example2() {
+    return {
+        foo: 1,
+        bar: 2
+    }
+}
+
+let [foo,bar] = example();
+console.log(foo,bar);
+
+```
+
+### 函数参数定义
+```
+function f([x,y,z]){}
+f([1,2,3])
+
+function f({x,y,z}){}
+f({z:3,x:2,y:1});
+```
+
+### 提取JSON的数据
+```
+let jsonData = {
+    id: 42,
+    status: 'ok',
+    data: [888,999]
+}
+
+let {id,status,data:number} = jsonData;
+console.log(id,status,number);//42 'ok' [ 888, 999 ]
+```
+
+### 函数参数的默认值
+
+### 遍历Map解构的数据
+```
+const map = new Map();
+map.set('first', 'hello');
+map.set('second', 'world');
+
+for (let [key, value] of map) {
+  console.log(key + " is " + value);
+}
+// first is hello
+// second is world
+
+// 获取键名
+for (let [key] of map) {
+  // ...
+}
+
+// 获取键值
+for (let [,value] of map) {
+  // ...
+}
+```
+
+### 输入模块的指定方法
+```
+const {SourceMapConsumer,sourceNode} = require('source-map')
+```
