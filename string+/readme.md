@@ -103,6 +103,7 @@ console.log(is32bit('a'));//false
 ## padStart() padEnd()
 
 > es2017引入字符串补全长度的功能，如果某个字符串不够指定长度。会在头部或尾部补全。
++ padStart() 头部补全 padEnd() 尾部补全
 + 接受两个参数，参数一表示字符串补全的最大长度，参数二表示用来补全的字符串
 + 原字符串长度，等于或大于最大长度，补全不生效
 ```
@@ -127,5 +128,3 @@ console.log('123'.padEnd(10,'0'));
 console.log('12'.padStart(10,'YYYY-MM-DD'));
 console.log('09-12'.padStart(10,'YYYY-MM-DD'));
 ```
-### padStart() 头部补全
-### padEnd() 尾部补全
