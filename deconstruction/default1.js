@@ -1,4 +1,4 @@
-let [a = 1] = [undefined];
+// let [a = 1] = [undefined];
 let [a=1] = [undefined];
 console.log(a);
 

@@ -3,7 +3,8 @@ var tem = new Date();
 function f(){
     console.log(tem);
     if(false){
-        var tem = 'hello world';
+        // var tem = 'hello world';
+        let tem = 'hello world';
     }
 }
 

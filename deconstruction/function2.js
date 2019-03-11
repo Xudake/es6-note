@@ -23,3 +23,12 @@ console.log(move2())
 // [3, undefined]
 // [undefined, undefined]
 // [0, 0]
+
+var {a=0,b=0} = {};
+console.log(a,b);
+
+var {c,d} = {};
+console.log(c,d);
+
+var {e,f} = {e:0,f:0};
+console.log(e,f);

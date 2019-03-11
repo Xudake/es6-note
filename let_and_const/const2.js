@@ -1,7 +1,7 @@
 "use strict";
 const foo = Object.freeze({});
 
-foo.name = 'xk'; //TypeError: Cannot add property name, object is not extensible
+// foo.name = 'xk'; //TypeError: Cannot add property name, object is not extensible
 
 console.log(foo);
 
