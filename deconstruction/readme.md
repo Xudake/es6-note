@@ -70,7 +70,7 @@ console.log(l);//5
 ```
 
 ## 数值和布尔型的解构赋值
-> 只要等号右边不是对象或数组 都要先转为对象 由于undefined和null无法转为对象
+> 只要等号右边不是对象或数组 都要先转为对象 由于undefined和null无法转为对象,解构时报错
 ```
 let {toString: s} = 123;
 let {toString: bs} = true;

@@ -8,6 +8,7 @@ console.log('xxx'.padStart(2,'ab'));
 console.log('xxx'.padEnd(2,'ab'));
 
 console.log('abc'.padStart(10,'0123456789'))
+console.log('abc'.padStart(5,'0123456789'))
 
 console.log('x'.padStart(4));
 console.log('x'.padEnd(4));
