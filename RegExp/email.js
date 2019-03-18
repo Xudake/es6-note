@@ -4,20 +4,12 @@
 
 var re = /\w+@[a-z0-9]+\.[a-z]+/i
 
-var re2 = /^\w+@[a-z0-9]+\.[a-z]+/i
-
 var re3 = /^\w+@[a-z0-9]+\.[a-z]+$/i
 
 console.log(re.test('wwfsal@wer.com'));
 console.log(re.test('---wwfsal@wer.com'));
 console.log(re.test('你好wwfsal@wer.com'));
 console.log(re.test('wwfsal@wer.com----'));
-console.log('---------------------------')
-
-console.log(re2.test('wwfsal@wer.com'));
-console.log(re2.test('---wwfsal@wer.com'));
-console.log(re2.test('你好wwfsal@wer.com'));
-console.log(re2.test('wwfsal@wer.com----'));
 console.log('---------------------------')
 
 console.log(re3.test('---wwfsal@wer.com'));
