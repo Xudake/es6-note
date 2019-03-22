@@ -74,4 +74,16 @@ console.log(str.replace(re2, 0));
 
 ##### RegExp构造函数
 
-> es5中Reg
+> es5中RegExp不允许使用第二个参数添加修饰符
+
+```
+var regexp = new RegExp(/xyz/,'i');
+//es5中报错
+
+
+new RegExp(/xyz/ig,'i').flags; 
+//i
+```
+
+#### u修饰符
+
