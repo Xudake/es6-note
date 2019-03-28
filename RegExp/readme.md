@@ -84,6 +84,3 @@ var regexp = new RegExp(/xyz/,'i');
 new RegExp(/xyz/ig,'i').flags; 
 //i
 ```
-
-#### u修饰符
-
