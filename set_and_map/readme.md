@@ -50,10 +50,42 @@ console.log(set1); // { NaN }
 
 - size Set数据的尺寸
 
-- has()
+四个操作方法
 
-- add()
+- has() 判断是否有指定元素
 
-- delete()
+- add() 添加元素
 
-- clear()
+- delete() 删除元素
+
+- clear() 清除元素
+
+
+遍历方法
+
+- keys() 返回键名的遍历器
+
+- values() 返回键值的遍历器
+
+- entries() 返回键值对的遍历器
+
+- forEach() 使用回调函数遍历每个对象
+
+
+> keys,values,entries方法返回的都是遍历器对象，由于Set结构没有键名，只有键值，所以keys方法和values()方法的行为完全一致。
+
+Set默认可以遍历
+
+```
+Set.prototype[Symbol.iterator] === Set.prototype.values
+// true
+
+let set = new Set(['red', 'green', 'blue']);
+
+for (let x of set) {
+  console.log(x);
+}
+// red
+// green
+// blue
+```

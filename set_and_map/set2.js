@@ -6,3 +6,6 @@ console.log(s.has(2));
 console.log(s.has(3));
 s.delete(2);
 console.log(s.has(2));
+
+s.clear();
+console.log(s);
